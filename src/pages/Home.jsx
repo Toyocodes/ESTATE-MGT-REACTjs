@@ -31,7 +31,7 @@ const Home = () => {
         {isLoading ? (
         // If isLoading is true, display a spinner
         <div className="flex justify-center items-center h-[100vh]">
-          <RotatingTriangles colors={['#8A2BE2', '#8A2BE2', '#8A2BE2']}  height="120px" width="120px"/>
+          <RotatingTriangles colors={['#3938CD', '#3938CD', '#3938CD']}  height="120px" width="120px"/>
         </div>
       ) : (
         // If isLoading is false, display the actual content

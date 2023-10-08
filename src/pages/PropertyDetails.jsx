@@ -3,7 +3,7 @@ import { housesData } from '../data'
 import { useParams } from 'react-router-dom'
 import { BiBed, BiBath, BiArea} from 'react-icons/bi'
 import { Link } from 'react-router-dom'
-import Footer from '../components/Footer'
+
 
 const PropertyDetails = () => {
 
@@ -18,7 +18,7 @@ const PropertyDetails = () => {
 
   return (
     <section>
-      <div className="container mx-auto min-h-[800px] mb-4">
+      <div className="container mx-auto min-h-[800px] mb-4 pt-28">
           <div className='flex flex-col lg:flex-row lg:items-center 
           lg:justify-between'>
               <div>
@@ -99,7 +99,7 @@ const PropertyDetails = () => {
                     outline-none resize-none rounded w-full p-4 h-32 text-sm 
                     text-gray-400'
                     placeholder='Message'
-                    defaultValue="Hello, I'm interested in [Modern apartment]"
+                    defaultValue="Hello, I'm interested in [apartment type]"
                     name="message" id="" cols="30" rows="10">
                   </textarea>
                   
@@ -108,18 +108,19 @@ const PropertyDetails = () => {
                      rounded p-4 text-sm w-full transition'>
                       Send message
                     </button>
-                    <button className='border border-[#3938CD] text-[#3938CD] 
-                      hover:border-violet-500 hover:opacity-80
-                        rounded p-4 text-sm w-full transition'>
+                    <a href="tel:+2348097662998" className='text-center border border-[#3938CD]
+                     text-[#3938CD] hover:border-violet-500 hover:opacity-80 rounded p-4 
+                     text-sm w-full transition'>
                       Call us
-                    </button>
+                    </a>
                   </div>
+
                 </form>
               </div>
 
           </div>
       </div>
-      <Footer/>
+      
     </section>
 
     

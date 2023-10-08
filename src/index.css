@@ -60,89 +60,30 @@
 }
 /* join ends */
 
-/* TESTIMONIALS */
-/* .Testimonials{
+/* about page begins*/
+
+.heading{
+  /* background: url('./assets/img/happyfam2.jpg') rgba(20, 59, 95, 0.7); */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/img/happyfam2.jpg');
+  background-position: fixed;
+  background-size: cover;
+  height:70vh;
+  width: 100%;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  
-} */
-/* .left-t{
+  align-items: center;
+}
+/* about page ends */
+
+/* contact section begins */
+.head{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(21, 24, 202, 0.8)), url('./assets/img/aboutBg.jpg');
+  background-position: fixed;
+  background-size: cover;
+  height:70vh;
+  width: 100%;
   display: flex;
-  flex: 1 1;
-  gap: 1rem;
-  flex-direction: column;
-  color: #3938CD;
-} */
-/* .left-t>:nth-child(1){
-  font-weight: bold;
-  color: red;
-} */
-/* .left-t>:nth-child(2),
-.left-t>:nth-child(3){
-  font-weight: bold;
-  font-size: 3rem;
-} */
-/* .left-t>:nth-child(4){
-  text-transform: none;
-  text-align: justify;
-  line-height: 25px;
-  font-size: 15px;
-} */
-/* .right-t{
-  flex:1;
-  position: relative;
-} */
-/* .right-t>img{
-  position: absolute;
-  width: 17rem;
-  height: 20rem;
-  object-fit: cover;
-  right: 8rem;
-  top: 2rem;
-} */
-/* .right-t>:nth-child(1){
-  position: absolute;
-  width: 17rem ; height: 20rem;
-  border: 2px solid red;
-  background-color: transparent;
-  right: 9rem;
-  top: 0.9rem;
+  justify-content: center;
+  align-items: center;
 }
-.right-t>:nth-child(2){
-  position: absolute;
-  width: 17rem ; height: 19rem;
-  background: #3938CD;
-  top: 4rem; right: 7rem;
-} */
-
-@media (max-width:900px) {
-  /* .Testimonials{
-    flex-direction: column;
-
-  } */
-  /* .right-t{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-  } */
-  /* .right-t>div{
-    position: relative;
-    display: none;
-  } */
-  /* .right-t>img{
-    top: 0; right: 0;
-    position: relative;
-    align-self: center;
-  }  */
-  /* .right-t>:last-child{
-    display: block;
-    bottom: 0; left: 0;
-  } */
-}
-
-
-/* TESTIMONIALS ENDS*/
+/* contact section ends */

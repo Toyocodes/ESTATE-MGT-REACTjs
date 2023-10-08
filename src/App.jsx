@@ -4,6 +4,9 @@ import {Routes, Route} from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
+import About from './pages/About'
+import Property from './pages/Property'
+import Contact from './pages/Contact'
 import PropertyDetails from './pages/PropertyDetails'
 
 function App() {
@@ -13,6 +16,9 @@ function App() {
         <Header/>
           <Routes>
             <Route path='/' element={<Home/>}></Route>
+            <Route path='/About' element={<About/>}></Route>
+            <Route path='/Property' element={<Property/>}></Route>
+            <Route path='/Contact' element={<Contact/>}></Route>
             <Route path='/property/:id' element={<PropertyDetails/>}></Route>
           </Routes>  
         <Footer/>

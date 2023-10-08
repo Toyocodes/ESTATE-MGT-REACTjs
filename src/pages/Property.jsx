@@ -1,10 +1,10 @@
 import React, {useContext} from 'react'
-import {HouseContext} from './HouseContext'
-import House from './House'
+import {HouseContext} from '../components/HouseContext'
+import House from '../components/House'
 import {Link} from 'react-router-dom'
 import { ImSpinner2 } from 'react-icons/im'
 
-const HouseList = () => {
+const Property = () => {
   const { houses, loading }= useContext(HouseContext)
 
   if (loading){
@@ -20,7 +20,7 @@ const HouseList = () => {
   }
 
   return (
-    <section className='mt-[30rem] xs:mt-[32rem] sm:mt-[36rem] lg:mt-36'>
+    <section className='pt-[10rem]'>
       <h2 className='text-center text-[#3938CD] text-3xl 
         lg:text-4xl font-bold mb-12 lg:mb-16 '>
         Properties
@@ -45,4 +45,4 @@ const HouseList = () => {
   )
 }
 
-export default HouseList
+export default Property
