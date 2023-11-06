@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Image from '../assets/img/offerImg.jpg'
 import {
   Accordion,
@@ -11,21 +11,30 @@ import {
 import 'react-accessible-accordion/dist/fancy-example.css'
 import {MdOutlineArrowDropDown} from 'react-icons/md'
 import data from '../utils/accordion'
-// import {motion} from "framer-motion"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
+    
 
 const Offer = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   return (
     <section id='about' className='max-h-[640px] mt-24 mb-[26rem] lg:mb-10 xl:mt-24 xl:mb-24'>
       <div className='flex flex-col-reverse justify-center items-center gap-x-12 lg:flex-row '>
           <div>
               <div>
-                <div className='offer-image mb-10 lg:w-[28rem]'>
+                <div className='offer-image mb-10 lg:w-[28rem]' 
+                data-aos="slide-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                   <img src={Image} alt="offer-image" />
                 </div>
               </div>
           </div>
-          <div className="flex flex-col text-center">
+          <div className="flex flex-col text-center" 
+          data-aos="slide-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
               {/* <span className='text-xl lg:text-2xl text-yellow-600 font-bold'>What We Offer</span> */}
               <span className='text-3xl lg:text-4xl mb-4 text-[#3938CD] font-bold'>What We Offer</span>
               <span className='text-[13px] mb-6 text-gray-500 leading-5'>

@@ -1,8 +1,15 @@
-import React from "react"
+import React, {useEffect} from "react"
 import Image from '../assets/img/happyfam.jpg'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const About = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   return (
     <>
       <section className='about pb-20'>
@@ -15,7 +22,7 @@ const About = () => {
 
         <div className='mx-[10%]  mt-28'>
           <div className="grid grid-cols lg:grid-cols-2 gap-[3rem] items-center">
-            <div className=''>
+            <div className='' data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
               <h1 className="text-[2.5rem] text-[#3938CD] font-bold">Our Agency Story</h1>
               <p className="text-[#3938CD] text-[15px] mt-2 mb-8">Check out how we started..........</p>
               <p className="text-justify text-[15px] mb-6 leading-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -25,7 +32,7 @@ const About = () => {
                       More About Us
                     </button>
             </div>
-            <div className='flex justify-center items-center mt-[40px]'>
+            <div className='flex justify-center items-center mt-[40px]' data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
               <img src={Image} alt='' className="w-full h-full"/>
             </div>
           </div>

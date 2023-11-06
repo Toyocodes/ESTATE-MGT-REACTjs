@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 // import Logo from '../assets/img/logo.svg'
 import {BiMenuAltRight} from 'react-icons/bi'
 import {FaTimes} from 'react-icons/fa'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 
 const Header = () => {
@@ -16,7 +16,7 @@ const Header = () => {
     const closeMobileMenu = () => {
         setNav(false);
       };
-
+      const navigate = useNavigate()
   return (
     <header className=' py-3 mb-8 bg-white fixed top-0 left-0 right-0 border-b z-10'>
         <nav className='container mx-auto flex justify-between items-center gap-2 md:gap-4'> 
@@ -46,12 +46,12 @@ const Header = () => {
             </div>
 
             <div className='hidden md:flex items-center gap-6 md:pl-5 md:text-[15px]'> 
-                <Link className='hover:bg-[#3938CD] hover:text-white transition duration-500 px-4 py-3 rounded-lg border-[2px] border-[#3938CD]' to=''>
+                <Link className='bg-[#3938CD] hover:opacity-80 text-white transition duration-500 px-4 py-3 rounded-lg border-[2px] border-[#3938CD]' to='/login'>
                     Log in
                 </Link>
-                <Link className='bg-[#3938CD] hover:opacity-90 text-white px-4 py-3 rounded-lg transition duration-500 ' to=''>
+                {/* <Link className='bg-[#3938CD] hover:opacity-90 text-white px-4 py-3 rounded-lg transition duration-500 ' to='/signup'>
                     Sign up
-                </Link>
+                </Link> */}
             </div>
 
            
@@ -77,13 +77,13 @@ const Header = () => {
                         Testimonials 
                     </a>
                     <Link className='p-3 px-6 pt-2 text-[#3938CD] bg-white font-semibold rounded-full 
-                         hover:opacity-70 transition duration-500 ' to='/'>
+                         hover:opacity-70 transition duration-500 ' to='/login'>
                         Log in
                     </Link>
-                    <Link className='p-3 px-6 pt-2 text-[#3938CD] bg-white font-semibold rounded-full 
-                         hover:opacity-70 transition duration-500' to='/'>
+                    {/* <Link className='p-3 px-6 pt-2 text-[#3938CD] bg-white font-semibold rounded-full 
+                         hover:opacity-70 transition duration-500' to='/signup'>
                         Sign up
-                    </Link>
+                    </Link> */}
                 </div> 
             )}
             </div>

@@ -1,16 +1,23 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { testimonialsData } from '../data/testimonialsData'
 import {AiOutlineArrowLeft,AiOutlineArrowRight} from 'react-icons/ai'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Testimonials = () => {
+
+    useEffect(() => {
+        AOS.init();
+      }, [])
+
     const [selected, setSelected] = useState(0)
     const testLength = testimonialsData.length;
 
   return (
     <div id='testimonials' className='Testimonials container mx-auto pt-16 lg:pb-16 pb-[28rem]'>
         <div className='flex flex-col justify-center gap-[5rem] lg:flex-row'>
-            <div className='left-t flex-1 justify-center sm:text-center md:text-justify text-[#3938CD] ml-5'>
+            <div className='left-t flex-1 justify-center sm:text-center md:text-justify text-[#3938CD] ml-5' 
+            data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <div className='text-2xl text-red-500 font-bold'>Testimonials</div>
                 <div className='text-[3rem] font-bold text-[#3938CD]'>What People</div>
                 <div className='text-[3rem] font-bold text-[#3938CD]'>Say About Us</div>
@@ -25,7 +32,8 @@ const Testimonials = () => {
                 </div>
             </div>
 
-            <div className='right-t flex-1 relative'>
+            <div className='right-t flex-1 relative'
+            data-aos="slide-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <div className=''>
                     <div className='absolute w-[17rem] h-[20rem] 
                     border-2  border-red-500 bg-transparent 

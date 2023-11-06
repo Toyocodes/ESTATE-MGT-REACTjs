@@ -1,15 +1,22 @@
-import React from "react"
-
+import React, {useEffect} from "react"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const Contact = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+  
+
   return (
     <>
       <section>
 
         <div>
           <div className="head">
-            <div className="text-white">
+            <div className="text-white pl-8 md:pl-0">
               <p className="mb-2 text-base">Contact Us</p>
               <h1 className="text-2xl lg:text-4xl text-white 
                   font-bold leading-10">
